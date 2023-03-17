@@ -10,7 +10,7 @@ describe('Login', () => {
     cy.visit(Cypress.env('url'), {
         
     })
-})
+  })
 
   it('Login sucesso', () => {
     cy.login(user, password);
@@ -21,28 +21,33 @@ describe('Login', () => {
     cy.login(usuario_invalido, password)
     cy.Valida_msg_erro('Incorrect username or password.')
     
-});
+  });
 
-it('Login - senha incorreta', () => {
-  cy.login(user, senha_invalida)
-  cy.Valida_msg_erro('Incorrect username or password.')
+  it('Login - senha incorreta', () => {
+    cy.login(user, senha_invalida)
+    cy.Valida_msg_erro('Incorrect username or password.')
+    
+  });
   
-});
+  it('Login - sem senha', () => {
+    cy.login(user, '{enter}')
+    cy.Valida_msg_erro('"Senha" não pode ficar em branco.')
+  });
 
-it('Login - sem senha', () => {
-  cy.login(user, '{enter}')
-  cy.Valida_msg_erro('"Senha" não pode ficar em branco.')
-});
+  it('Login - sem usuario', () => {
+    cy.login('{enter}', password)
+    cy.Validaruser_msg_erro('"Login" não pode ficar em branco.')
+  });
 
-it('Login - sem usuario', () => {
-  cy.login('{enter}', password)
-  cy.Validaruser_msg_erro('"Login" não pode ficar em branco.')
-});
+  it('Login - sem usuario e senha', () => {
+    cy.login('{enter}', '{enter}')
+    cy.Validaruser_msg_erro('"Login" não pode ficar em branco.')
+    cy.Valida_msg_erro('"Senha" não pode ficar em branco.')
+  });
 
-it('Login - sem usuario e senha', () => {
-  cy.login('{enter}', '{enter}')
-  cy.Validaruser_msg_erro('"Login" não pode ficar em branco.')
-  cy.Valida_msg_erro('"Senha" não pode ficar em branco.')
-});
+  it('Esqueci minha senha', () => {
+    cy.esqueciMinhaSenha();
+    cy.url().should('include', '/')
+  });
 
 })  
