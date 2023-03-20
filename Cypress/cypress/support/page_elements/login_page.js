@@ -11,6 +11,9 @@ class loginPage {
         this.modal_redefinir_senha = '.login-box-body'
         this.btn_voltar_login = '.login-box-body > a'
         this.txt_redefinir_senha = '.text-teal'
+        this.input_txt_reset_email = '#passwordresetrequestform-email'
+        this.inviar_email_reset_senha = '#passwordresetrequestform-email'
+        this.msg_error_email = '.help-block'
     }
 }
 

@@ -50,4 +50,8 @@ describe('Login', () => {
     cy.url().should('include', '/')
   });
 
+  it('Solicitar senha com email inválido', () => {
+    cy.solicitar_senha();
+  });
+
 })  

@@ -16,4 +16,10 @@ describe('Criar Clientes', () => {
     
   })
 
+  it('Criando cliente sucesso', () => {
+    cy.menu_cadastro()
+    cy.criar_cliente()
+    cy.criando_cliente()
+    cy.url().should('include', '/register/customer/index')
+  })
 })  
