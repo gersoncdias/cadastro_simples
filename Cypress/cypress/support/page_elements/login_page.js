@@ -1,7 +1,7 @@
 class loginPage {
     constructor() {
 
-        this.campo_login ='#loginform-username'
+        this.campo_login = '#loginform-username'
         this.campo_senha = '#loginform-password'
         this.btn_login = '.btn'
         this.txt_titulo = 'h3'

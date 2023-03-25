@@ -5,17 +5,15 @@ const painelCliente = '/register/customer/index'
 describe('Painel Cliente', () => {
 
   beforeEach(() => {
-    
-    cy.visit(Cypress.env('url'), {
-    })
+
+    cy.visit(Cypress.env('url'), {})
     cy.login(user, password);
-})
+  })
 
   it('Lista Painel Cliente', () => {
     cy.menu_cadastro()
     cy.painel_cliente()
   })
-
 
   it('Criar Cliente', () => {
     cy.menu_cadastro()
@@ -41,4 +39,12 @@ describe('Painel Cliente', () => {
     cy.modal_exibir_cliente()
     cy.url().should('include', painelCliente);
   })
-})  
+
+  it('Excluir Cliente', () => {
+    cy.menu_cadastro()
+    cy.criar_cliente()
+    cy.criando_cliente_fixo()
+    cy.contains('tbody tr', 'PEDRO AUGUSTO').find('td input[type="checkbox"]').check()
+    cy.excluir_cliente()
+  })
+})

@@ -6,10 +6,8 @@ const senha_invalida = 'invalido'
 describe('Login', () => {
 
   beforeEach(() => {
-    
-    cy.visit(Cypress.env('url'), {
-        
-    })
+
+    cy.visit(Cypress.env('url'), {})
   })
 
   it('Login sucesso', () => {
@@ -20,15 +18,15 @@ describe('Login', () => {
   it('Login - usuario incorretos', () => {
     cy.login(usuario_invalido, password)
     cy.Valida_msg_erro('Incorrect username or password.')
-    
+
   });
 
   it('Login - senha incorreta', () => {
     cy.login(user, senha_invalida)
     cy.Valida_msg_erro('Incorrect username or password.')
-    
+
   });
-  
+
   it('Login - sem senha', () => {
     cy.login(user, '{enter}')
     cy.Valida_msg_erro('"Senha" não pode ficar em branco.')
@@ -54,4 +52,4 @@ describe('Login', () => {
     cy.solicitar_senha();
   });
 
-})  
+})
