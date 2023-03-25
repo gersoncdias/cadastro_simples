@@ -60,4 +60,22 @@ https://localhost/cadastro_simples/web
 login: admin
 senha: admin1
 ~~~~
+
+### Acessar diretório do cypress:
+~~~~
+cd cadastro_simples/Cypress
+~~~~
+
+### Instalar Cypress:
+No diretório do projeto cypress digite:
+~~~~
+npm install cypress --save-dev
+~~~~
+
+### iniciando Cypress:
+~~~~
+cd cadastro_simples/Cypress
+~~~~
+npx cypress open
+
 # cadastro_simples

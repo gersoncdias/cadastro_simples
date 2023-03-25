@@ -32,3 +32,6 @@ phpunit.phar
 
 # vagrant runtime
 /.vagrant
+
+#cypress.env
+cypress.env.json
