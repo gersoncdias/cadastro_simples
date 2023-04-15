@@ -67,6 +67,9 @@ cd cadastro_simples/Cypress
 ~~~~
 
 ### Instalar Cypress:
+[Doc Oficial Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress)
+
+
 No diretório do projeto cypress digite:
 ~~~~
 npm install cypress --save-dev
@@ -76,6 +79,6 @@ npm install cypress --save-dev
 ~~~~
 cd cadastro_simples/Cypress
 ~~~~
-npx cypress open
+yarn cypress open
 
 # cadastro_simples
