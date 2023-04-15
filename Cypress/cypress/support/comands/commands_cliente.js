@@ -3,17 +3,15 @@ import {
 } from '@faker-js/faker';
 const nomeCompleto = `${faker.name.firstName()} ${faker.name.lastName()}`
 
-const loginPage = require('../page_elements/login_page')
-const loginPg = new loginPage()
 
 const logoutPage = require('../page_elements/logout_page')
 const logoutPg = new logoutPage()
 
-const cadastroPage = require('../page_elements/cadastro_page')
-const cadastroPg = new cadastroPage()
-
 const painelClientePage = require('../page_elements/painel_cliente_page')
 const painelClientePg = new painelClientePage()
+
+const cadastroPage = require('../page_elements/cadastro_page')
+const cadastroPg = new cadastroPage()
 
 
 Cypress.Commands.add('menu_cadastro', () => {
@@ -65,12 +63,6 @@ Cypress.Commands.add('criando_cliente', () => {
         .should('exist')
         .should('be.visible')
         .click()
-
-    //****Corrigir******/
-    // cy.get(cadastroPg.msg_sucesso)
-    //   .should('exist')
-    //   .should('be.visible')
-    //   .should('contains.text', 'REGISTRO CRIADO COM SUCESSO!')
 })
 
 Cypress.Commands.add('criando_cliente_fixo', () => {
@@ -218,7 +210,7 @@ Cypress.Commands.add('painel_cliente', () => {
         .should('be.visible')
         .should('contains.text', 'Clientes')
 
-    cy.get(painelClientePg.grid_painelPpaciente)
+    cy.get(painelClientePg.grid_painelpaciente)
         .should('exist')
         .should('be.visible')
         .should('contains.text', 'MARIA DAS DORES')
@@ -336,7 +328,7 @@ Cypress.Commands.add('modal_exibir_cliente', () => {
 
 Cypress.Commands.add('excluir_cliente', () => {
 
-    cy.get(painelClientePg.grid_painelPpaciente)
+    cy.get(painelClientePg.grid_painelpaciente)
         .should('exist')
         .should('be.visible')
         .should('contains.text', 'MARIA DAS DORES')
