@@ -67,7 +67,7 @@ cd cadastro_simples/Cypress
 ~~~~
 
 ### Instalar Cypress:
-[Flex Grid](https://docs.cypress.io/guides/getting-started/installing-cypress)
+[Doc Oficial Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress)
 
 
 No diretório do projeto cypress digite:
