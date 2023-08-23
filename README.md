@@ -30,6 +30,7 @@ Ambientes para rodar migrates:
 #### Criar tabelas RBAC e Admin
 ~~~~
 # Acesso ao cliente do MySql
+mysql -u root -p -h 127.0.0.1
 user: root
 pass: root
 ~~~~
@@ -70,15 +71,13 @@ cd cadastro_simples/Cypress
 [Doc Oficial Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress)
 
 
+### iniciando Cypress:
+~~~~
 No diretório do projeto cypress digite:
 ~~~~
 npm install cypress --save-dev
-~~~~
-
-### iniciando Cypress:
 ~~~~
 cd cadastro_simples/Cypress
 ~~~~
 yarn cypress open
 
-# cadastro_simples
