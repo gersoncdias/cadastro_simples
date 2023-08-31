@@ -79,5 +79,5 @@ npm install cypress --save-dev
 ~~~~
 cd cadastro_simples/Cypress
 ~~~~
-yarn cypress open
+npx cypress open
 
