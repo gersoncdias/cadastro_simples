@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1697428507216' stop='1697428526625'>
+    <name>Criar Clientes</name>
+    <title>Criar Clientes</title>
+    <test-cases>
+        <test-case start='1697428507216' status='passed' stop='1697428518211'>
+            <name>Cadastro cliente sucesso</name>
+            <title>Cadastro cliente sucesso</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1697428518246' status='passed' stop='1697428526624'>
+            <name>Criando cliente sucesso</name>
+            <title>Criando cliente sucesso</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

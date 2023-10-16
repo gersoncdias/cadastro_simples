@@ -39,11 +39,18 @@ $fieldOptions2 = [
             ->label(false)
             ->passwordInput(['placeholder' => $model->getAttributeLabel('password')]) ?>
 
-        <div class="row">
+        <div id="delayedDiv" style="display: none;" class="row">
             <div class="col-xs-12">
                 <?= Html::submitButton('Entrar', ['class' => 'btn btn-primary pull-right', 'name' => 'login-button']) ?>
             </div>
         </div>
+
+        <script>
+            function showDelayedDiv() {
+                document.getElementById('delayedDiv').style.display = 'block';
+            }
+            setTimeout(showDelayedDiv, 1000);
+        </script>
 
         <?php ActiveForm::end(); ?>
 
